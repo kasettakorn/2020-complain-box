@@ -27,7 +27,7 @@ export default class App extends Component {
             <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]} defaultValue="1">
             <Menu.Item key="1" icon={<FileFilled />}>
                 <Link
-                  to="/"
+                  to="/2020-complain-box/"
                   style={{ textDecoration: "none" }}
                 >
                   หน้าหลัก
@@ -35,7 +35,7 @@ export default class App extends Component {
               </Menu.Item>
               <Menu.Item key="2" icon={<FileFilled />}>
                 <Link
-                  to="/post-it"
+                  to="/2020-complain-box/post-it/"
                   style={{ textDecoration: "none" }}
                 >
                   Post-it
@@ -43,7 +43,7 @@ export default class App extends Component {
               </Menu.Item>
               <Menu.Item key="3" icon={<SoundFilled />}>
                 <Link
-                  to="/sound"
+                  to="/2020-complain-box/sound/"
                   style={{ textDecoration: "none" }}
                 >
                   เสียงฝากด่า
@@ -63,14 +63,14 @@ export default class App extends Component {
                 className="site-layout-background"
                 style={{ padding: 24, height:"100vh" }}
               >
-                <Route exact path="/" component={Home} />
+                <Route exact path="/2020-complain-box/" component={Home} />
                 <Route
-                  path="/post-it"
+                  path="/2020-complain-box/post-it/"
                   component={PostItList}
              
                 />
                 <Route
-                  path="/sound"
+                  path="/2020-complain-box/sound/"
                   component={Cheerup}
                 />
               </div>
