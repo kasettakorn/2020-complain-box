@@ -2,17 +2,14 @@ import React, { Component } from "react";
 import "antd/dist/antd.css";
 import { Layout, Menu } from "antd";
 import {
-  HeartFilled,
-  HomeFilled,
-  InfoCircleFilled,
-  PlusSquareFilled,
+  FileFilled,
+  SoundFilled,
 } from "@ant-design/icons";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Support from "./components/Support";
-import Location from "./components/Location";
-import Home from "./components/Home";
 import Cheerup from "./components/Cheerup";
+import PostItList from "./components/PostitList";
+import Home from "./components/Home";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -27,42 +24,29 @@ export default class App extends Component {
             collapsedWidth="0"
           
           >
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-              <Menu.Item key="1" icon={<HomeFilled />}>
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]} defaultValue="1">
+            <Menu.Item key="1" icon={<FileFilled />}>
                 <Link
-                  to="/thailand-mob-support-system/"
+                  to="/"
                   style={{ textDecoration: "none" }}
                 >
                   หน้าหลัก
                 </Link>
               </Menu.Item>
-              <Menu.Item key="2" icon={<PlusSquareFilled />}>
+              <Menu.Item key="2" icon={<FileFilled />}>
                 <Link
-                  to="/thailand-mob-support-system/support"
+                  to="/post-it"
                   style={{ textDecoration: "none" }}
                 >
-                  ขอความช่วยเหลือ
+                  Post-it
                 </Link>
               </Menu.Item>
-              <Menu.Item key="3" icon={<InfoCircleFilled />}>
+              <Menu.Item key="3" icon={<SoundFilled />}>
                 <Link
-                  to="/thailand-mob-support-system/searchLocation"
+                  to="/sound"
                   style={{ textDecoration: "none" }}
                 >
-                  ค้นหาพิกัด
-                </Link>
-              </Menu.Item>
-              <Menu.Item
-                key="4"
-                icon={
-                  <HeartFilled style={{ color: "red", fontSize: "1.5em" }} />
-                }
-              >
-                <Link
-                  to="/thailand-mob-support-system/cheerup"
-                  style={{ textDecoration: "none" }}
-                >
-                  Cheer up !
+                  เสียงฝากด่า
                 </Link>
               </Menu.Item>
             </Menu>
@@ -72,24 +56,21 @@ export default class App extends Component {
               className="site-layout-sub-header-background"
               style={{ padding: 0, color: "white", fontSize: 18 }}
             >
-              <span role="img" >📌 ระบบสอบถามข้อมูลแก่ผู้ชุมนุม</span>
+              <span role="img" aria-label="img" style={{fontSize:"30px"}} >📮 กล่องฝากด่า 2020</span>
             </Header>
             <Content style={{ margin: "24px 16px 0" }}>
               <div
                 className="site-layout-background"
                 style={{ padding: 24, height:"100vh" }}
               >
-                <Route path="/thailand-mob-support-system/" component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route
-                  path="/thailand-mob-support-system/support"
-                  component={Support}
+                  path="/post-it"
+                  component={PostItList}
+             
                 />
                 <Route
-                  path="/thailand-mob-support-system/searchLocation"
-                  component={Location}
-                />
-                <Route
-                  path="/thailand-mob-support-system/cheerup"
+                  path="/sound"
                   component={Cheerup}
                 />
               </div>

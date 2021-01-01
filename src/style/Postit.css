@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+#postit-list {
+  animation: fadein 1s;
+}
+h2,
+p {
+  font-weight: normal;
+}
+.post-it-ul,
+.post-it-li {
+  list-style: none;
+}
+.post-it-ul {
+  overflow: hidden;
+  padding: 3em;
+}
+.post-it-ul .post-it-li a {
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: block;
+  height: 14em;
+  width: 14em;
+  padding: 1em;
+  /* Firefox */
+  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(-6deg);
+}
+.post-it-ul .post-it-li {
+  margin: 1em;
+  float: left;
+}
+.post-it-ul .post-it-li h2 {
+  font-size: 140%;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.post-it-ul .post-it-li p {
+  font-family: "Prompt", sans-serif;
+  font-size: 20px;
+}
+.post-it-ul .post-it-li:nth-child(even) a {
+  transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+}
+.post-it-ul .post-it-li:nth-child(3n) a {
+  transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
+}
+.post-it-ul .post-it-li:nth-child(5n) a {
+  transform: rotate(5deg);
+  position: relative;
+  top: -10px;
+}
+.post-it-ul .post-it-li a:hover,
+.post-it-ul .post-it-li a:focus {
+  -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  position: relative;
+  z-index: 5;
+}
+.post-it-ul .post-it-li:nth-child(even) a {
+  position: relative;
+  top: 5px;
+  background: rgb(204, 255, 255);
+}
+.post-it-ul .post-it-li:nth-child(3n) a {
+  position: relative;
+  top: -5px;
+  background: rgb(206, 255, 204);
+}
+.post-it-ul .post-it-li:nth-child(5n) a {
+  position: relative;
+  top: -5px;
+  background: rgb(206, 255, 204);
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import MicRecorder from "mic-recorder-to-mp3";
 import { Button, Input, Space } from "antd";
 import {
-  ExclamationCircleOutlined,
   PlayCircleFilled,
   SoundFilled,
   UploadOutlined,
@@ -10,7 +9,7 @@ import {
 } from "@ant-design/icons";
 import { storage } from "../firebase";
 import Modal from "antd/lib/modal/Modal";
-import "../style/CommandButton.css";
+
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -49,23 +48,27 @@ export default class SoundCommandButton extends Component {
 
   handleUpload = () => {
     this.setState({ modalConfirmLoading: true });
-    getFileBlob(this.state.blobURL, (blob) => {
-      storage
-        .ref(`sounds/${this.state.uploadName}`)
-        .put(blob)
-        .then(function (snapshot) {
-          console.log("Uploaded a blob or file!");
-        })
-        .catch(function (error) {
-          console.log("Error");
-        })
-        .finally(() => {
-          this.setState({
-            modalConfirmLoading: false,
-            modalConfirmVisible: false,
+    setTimeout(() => {
+      this.setState({ modalConfirmLoading: false });
+      getFileBlob(this.state.blobURL, (blob) => {
+        storage
+          .ref(`sounds/${this.state.uploadName}`)
+          .put(blob)
+          .then(function (snapshot) {
+            console.log("Uploaded a blob or file!");
+          })
+          .catch(function (error) {
+            console.log("Error");
+          })
+          .finally(() => {
+            this.setState({
+              modalConfirmLoading: false,
+              modalConfirmVisible: false,
+            });
           });
-        });
-    });
+      });     
+    }, 5000);
+
   };
 
   start = () => {

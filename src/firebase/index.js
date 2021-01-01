@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/storage";
+import "firebase/database";
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -10,11 +11,12 @@ const firebaseConfig = {
   storageBucket: "mob-support-3d5a1.appspot.com",
   messagingSenderId: process.env.messagingSenderId,
   appId: process.env.appId,
+
 };
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+firebase.initializeApp(firebaseConfig);
 
 const storage = firebase.storage();
+const database = firebase.database();
 
-export { storage, firebase as default };
+
+export { storage, database, firebase as default };

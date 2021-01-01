@@ -27,7 +27,7 @@ export default class Cheerup extends Component {
         this.setState({ isBlocked: true });
       }
     );
-    let urls = [], metadata = []
+    let urls = [];
     storage.ref("sounds").listAll().then((result) => {
         result.items.forEach(sound => {
           // And finally display them
@@ -55,7 +55,7 @@ export default class Cheerup extends Component {
       <div>
       <SoundCommandButton /><br/>
         <div className="row">
-            {this.state.sounds.map((sound, i) => {
+            {this.state.sounds && this.state.sounds.map((sound, i) => {
               return <div key={i} className="col col-sm col-md-4">
               
                 <Card title= {"📣 " + this.state.metadata[i]} key={i}>
