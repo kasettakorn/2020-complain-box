@@ -20,8 +20,6 @@ jobs:
         npm install
         npm run-script build
       env:
-        REACT_APP_APIKey: ${{ secrets.REACT_APP_APIKey }}
-        REACT_APP_APISecret: ${{ secrets.REACT_APP_APISecret }}
         REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
         REACT_APP_AUTHDOMAIN: ${{ secrets.REACT_APP_AUTHDOMAIN }}
         REACT_APP_DATABASEURL: ${{ secrets.REACT_APP_DATABASEURL }}
