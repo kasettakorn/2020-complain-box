@@ -4,14 +4,13 @@ import "firebase/database";
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  databaseURL: process.env.databaseURL,
-  projectId: process.env.projectId,
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
   storageBucket: "mob-support-3d5a1.appspot.com",
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
-
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 firebase.initializeApp(firebaseConfig);
 
