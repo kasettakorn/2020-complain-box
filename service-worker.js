@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tanabata-2021/precache-manifest.b4d83a226cde03bbeced1607201ab7d2.js"
+  "/tanabata-2021/precache-manifest.af1b6b333c1412e0ddd996c12340dcdf.js"
 );
 
 self.addEventListener('message', (event) => {
