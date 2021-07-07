@@ -19,38 +19,6 @@ export default class App extends Component {
     return (
       <Router>
         <Layout>
-          <Sider
-            breakpoint="lg"
-            collapsedWidth="0"
-          
-          >
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]} defaultValue="1">
-            <Menu.Item key="1" icon={<FileFilled />}>
-                <Link
-                  to="/2020-complain-box/"
-                  style={{ textDecoration: "none" }}
-                >
-                  หน้าหลัก
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="2" icon={<FileFilled />}>
-                <Link
-                  to="/2020-complain-box/post-it/"
-                  style={{ textDecoration: "none" }}
-                >
-                  Post-it
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="3" icon={<SoundFilled />}>
-                <Link
-                  to="/2020-complain-box/sound/"
-                  style={{ textDecoration: "none" }}
-                >
-                  เสียงฝากด่า
-                </Link>
-              </Menu.Item>
-            </Menu>
-          </Sider>
           <Layout>
             <Header
               className="site-layout-sub-header-background"
@@ -63,16 +31,7 @@ export default class App extends Component {
                 className="site-layout-background"
                 style={{ padding: 24, height:"100vh" }}
               >
-                <Route exact path="/2020-complain-box/" component={Home} />
-                <Route
-                  path="/2020-complain-box/post-it/"
-                  component={PostItList}
-             
-                />
-                <Route
-                  path="/2020-complain-box/sound/"
-                  component={Cheerup}
-                />
+                <PostItList />
               </div>
             </Content>
             <Footer style={{ textAlign: "center", backgroundColor: "white" }}>
