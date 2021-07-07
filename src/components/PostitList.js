@@ -130,12 +130,13 @@ export default class PostItList extends Component {
         <Button
           type="primary"
           size="large"
+          block
           style={{ border: "none" }}
           icon={<UploadOutlined />}
           loading={this.state.loading}
           onClick={() => this.setState({ modalVisible: true })}
         >
-          สร้าง Post-it
+          Create Tanabata
         </Button>
         <ul className="post-it-ul">
           {this.state.data.map((data, index) => (

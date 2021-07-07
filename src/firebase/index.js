@@ -4,13 +4,13 @@ import "firebase/database";
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_APIKEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASEURL,
-  projectId: process.env.REACT_APP_PROJECTID,
+  apiKey: "AIzaSyAcR04zfOkpNnf90aumafMe4JyNdLmmzKM",
+  authDomain: "mob-support-3d5a1.firebaseapp.com",
+  databaseURL: "https://mob-support-3d5a1.firebaseio.com",
+  projectId: "mob-support-3d5a1",
   storageBucket: "mob-support-3d5a1.appspot.com",
-  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_APPID,
+  messagingSenderId: "755638116751",
+  appId: "1:755638116751:web:70d8f71ef5c5c7148aabfa"
 };
 firebase.initializeApp(firebaseConfig);
 

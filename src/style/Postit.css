@@ -12,15 +12,15 @@ p {
 }
 .post-it-ul {
   overflow: hidden;
-  padding: 3em;
+  /* padding: 3em; */
 }
 .post-it-ul .post-it-li a {
   text-decoration: none;
   color: #000;
   background: #ffc;
   display: block;
-  height: 14em;
-  width: 14em;
+  height: 60vh;
+  width: 10em;
   padding: 1em;
   /* Firefox */
   -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
@@ -31,7 +31,7 @@ p {
   transform: rotate(-6deg);
 }
 .post-it-ul .post-it-li {
-  margin: 1em;
+  margin: 2em;
   float: left;
 }
 .post-it-ul .post-it-li h2 {
@@ -41,7 +41,15 @@ p {
 }
 .post-it-ul .post-it-li p {
   font-family: "Prompt", sans-serif;
-  font-size: 20px;
+  font-size: 200%;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  max-width: 3ch;
+  padding: 10px;
+  height: 11em;
+position: relative;
+left: 30%;
 }
 .post-it-ul .post-it-li:nth-child(even) a {
   transform: rotate(4deg);
@@ -80,7 +88,17 @@ p {
 .post-it-ul .post-it-li:nth-child(5n) a {
   position: relative;
   top: -5px;
-  background: rgb(206, 255, 204);
+  background: rgb(255, 130, 121);
+}
+.post-it-ul .post-it-li:nth-child(7n) a {
+  position: relative;
+  top: -5px;
+  background: rgb(119, 255, 232);
+}
+.post-it-ul .post-it-li:nth-child(9n) a {
+  position: relative;
+  top: -5px;
+  background: rgb(240, 126, 255);
 }
 @keyframes fadein {
   from { opacity: 0; }
