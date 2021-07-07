@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46a4ad7873e6fe1399ce09c550626253",
+    "revision": "6cbd189d0c6e8f2482b176b461f27f98",
     "url": "/tanabata-2021/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tanabata-2021/static/css/2.71d44871.chunk.css"
   },
   {
-    "revision": "73d777af153b32ba0714",
+    "revision": "230ca10c3791f36fd379",
     "url": "/tanabata-2021/static/css/main.5561ae39.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tanabata-2021/static/js/2.3fb866cd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "73d777af153b32ba0714",
-    "url": "/tanabata-2021/static/js/main.a7f87bc1.chunk.js"
+    "revision": "230ca10c3791f36fd379",
+    "url": "/tanabata-2021/static/js/main.d4fecce3.chunk.js"
   },
   {
     "revision": "4144d6af68dbb780ebf0",
